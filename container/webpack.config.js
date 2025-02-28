@@ -11,7 +11,8 @@ module.exports = {
       name: 'container',
       remotes: {
         products: 'products@http://localhost:8081/remoteEntry.js',
-        cartApp: 'cart@http://localhost:8082/remoteEntry.js'
+        cartApp: 'cart@http://localhost:8082/remoteEntry.js' // here cart is the plugin name defined in cart app and 
+        // cartApp is used to import dependencies from cart app inside our container app
       },
     }),
     new HtmlWebpackPlugin({

@@ -11,8 +11,14 @@ module.exports = {
       name: 'products',
       filename: 'remoteEntry.js', //It lists different modules that can be loaded from the Products project
       exposes: {
-        './ProductsIndex': './src/index',
+        './ProductsIndex': './src/bootstrap', // check explanation in cart webpack.config.js file 
       },
+      shared: ['faker']
+      /* shared: {
+        faker: {
+          singleton: true,
+        }
+      } */
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
